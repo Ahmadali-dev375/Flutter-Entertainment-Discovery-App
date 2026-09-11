@@ -1,13 +1,23 @@
-# Q Select — Flutter Movie & TV Discovery App
+# 🎬 Flutter Movie & Series Discovery App
 
-A Flutter movie and television discovery and recommendation application. This project is a restored prototype and learning application built to demonstrate mobile media discovery, local-first persistence, and cloud synchronization.
+<p align="center">
+  A Flutter movie and television discovery and recommendation application built to demonstrate mobile media discovery, local-first persistence, and cloud synchronization.
+</p>
+
+<p align="center">
+  <img alt="Flutter" src="https://img.shields.io/badge/Flutter-Dart-02569B?logo=flutter&logoColor=white">
+  <img alt="Firebase" src="https://img.shields.io/badge/Firebase-Auth%20%2B%20Firestore-FFCA28?logo=firebase&logoColor=black">
+  <img alt="TMDB" src="https://img.shields.io/badge/TMDB-REST%20API-01B4E4?logo=themoviedatabase&logoColor=white">
+  <img alt="Platform" src="https://img.shields.io/badge/Primary%20Platform-Android-3DDC84?logo=android&logoColor=white">
+  <img alt="Status" src="https://img.shields.io/badge/Status-Restored%20Prototype-F0A43C">
+</p>
 
 ---
 
-## Features
+## ✨ Features
 
 - **Trending Discovery**: Browse trending movies and TV series fetched in real time.
-- **Mood-Based Recommendations**: Explore curated content recommendations mapped to various moods (e.g., happy, chill, romantic, excited).
+- **Mood-Based Recommendations**: Explore curated content recommendations mapped to moods such as happy, chill, romantic, and excited.
 - **Category & Genre Browsing**: Filter content across multiple movie and TV genres.
 - **Movie & TV Filtering**: Search and filter titles by type, rating, and genre.
 - **Local Watchlist**: Fast, offline-first watchlist powered by local SQLite (`sqflite`).
@@ -20,7 +30,53 @@ A Flutter movie and television discovery and recommendation application. This pr
 
 ---
 
-## Tech Stack
+## 📱 App Showcase
+
+<p align="center">
+  <img src="assets/screenshots/q-select-showcase.gif" alt="Q Select animated app showcase" width="850">
+</p>
+
+<p align="center">
+  <sub>Animated GitHub-friendly carousel showcasing discovery, filters, content preferences, and profile/watchlist flows.</sub>
+</p>
+
+<details>
+<summary><b>🖼️ View all screenshots</b></summary>
+<br>
+
+<table>
+  <tr>
+    <td align="center" width="25%">
+      <img src="assets/screenshots/home.jpeg" alt="Q Select home and recommendations screen" width="210"><br>
+      <b>Home & Recommendations</b><br>
+      <sub>Mood discovery, trending content, and recommendations</sub>
+    </td>
+    <td align="center" width="25%">
+      <img src="assets/screenshots/filters.jpeg" alt="Q Select filter options screen" width="210"><br>
+      <b>Filter Options</b><br>
+      <sub>Genre and discovery filtering controls</sub>
+    </td>
+    <td align="center" width="25%">
+      <img src="assets/screenshots/content-type.jpeg" alt="Q Select content type selection" width="210"><br>
+      <b>Content Preferences</b><br>
+      <sub>Rule-based content-type selection</sub>
+    </td>
+    <td align="center" width="25%">
+      <img src="assets/screenshots/profile.jpeg" alt="Q Select user profile and watchlist screen" width="210"><br>
+      <b>Profile & Watchlist</b><br>
+      <sub>Account settings, dark mode, and saved titles</sub>
+    </td>
+  </tr>
+</table>
+
+</details>
+
+> [!NOTE]
+> The profile screenshot in this repository has the account email visually redacted for public portfolio use.
+
+---
+
+## 🧰 Tech Stack
 
 - **Framework**: [Flutter](https://flutter.dev/) (Dart SDK `^3.8.1`)
 - **State Management**: [Provider](https://pub.dev/packages/provider)
@@ -40,9 +96,9 @@ A Flutter movie and television discovery and recommendation application. This pr
 
 ---
 
-## Project Status
+## 🚧 Project Status
 
-This repository is a **restored learning and prototype project**. 
+This repository is a **restored learning and prototype project**.
 
 - **Primary Target Platform**: **Android** is the primary tested and intended deployment target.
 - **Cross-Platform Compatibility**: While Flutter supports iOS, Web, macOS, Linux, and Windows, those platforms have not been fully tested or configured for this project.
@@ -50,7 +106,7 @@ This repository is a **restored learning and prototype project**.
 
 ---
 
-## TMDB Setup
+## 🎞️ TMDB Setup
 
 TMDB API credentials are **not committed** to this repository. You must obtain your own free API key from [The Movie Database](https://www.themoviedb.org/documentation/api).
 
@@ -61,16 +117,18 @@ The application reads TMDB credentials at compile time using Dart environment va
 | Variable | Description |
 |---|---|
 | `TMDB_API_KEY` | Your TMDB v3 API Key |
-| `TMDB_READ_ACCESS_TOKEN` | (Optional) Your TMDB v4 Read Access Token (Bearer Token) |
+| `TMDB_READ_ACCESS_TOKEN` | Optional TMDB v4 Read Access Token (Bearer Token) |
 
 ### Running with Credentials
 
-**Windows (PowerShell / Command Prompt single-line):**
+**Windows (PowerShell / Command Prompt single line):**
+
 ```powershell
 flutter run --dart-define=TMDB_API_KEY=YOUR_TMDB_KEY --dart-define=TMDB_READ_ACCESS_TOKEN=YOUR_TMDB_TOKEN
 ```
 
 **macOS / Linux:**
+
 ```bash
 flutter run \
   --dart-define=TMDB_API_KEY=YOUR_TMDB_KEY \
@@ -81,34 +139,34 @@ flutter run \
 > If credentials are not supplied, the app will launch gracefully and display a missing-credentials notice in debug logs without crashing, but TMDB content requests will return empty results.
 
 > [!WARNING]
-> Using `--dart-define` keeps credentials out of the public source code repository. However, client-side credentials compiled into a mobile binary can still be extracted by reverse engineering. For production systems, sensitive third-party API calls should be proxied through a secure backend service.
+> Using `--dart-define` keeps credentials out of the public source repository. However, client-side credentials compiled into a mobile binary can still be extracted by reverse engineering. For production systems, sensitive third-party API calls should be proxied through a secure backend service.
 
 ---
 
-## Firebase Setup
+## 🔥 Firebase Setup
 
 The application uses Firebase for Authentication (Email/Password & Google Sign-In) and Cloud Firestore for watchlist storage.
 
 ### Initialization Strategy
 
-The project uses **native Android Firebase initialization** via `android/app/google-services.json` processed by the Google Services Gradle plugin (`com.google.gms.google-services`), invoked in `lib/main.dart` via `await Firebase.initializeApp()`.
+The project uses **native Android Firebase initialization** via `android/app/google-services.json`, processed by the Google Services Gradle plugin (`com.google.gms.google-services`), and invoked in `lib/main.dart` via `await Firebase.initializeApp()`.
 
 ### Configuring Your Own Firebase Project
 
 1. Create a project in the [Firebase Console](https://console.firebase.google.com/).
 2. Enable **Authentication** with **Email/Password** and **Google** providers.
-3. Enable **Cloud Firestore** database with appropriate security rules.
-4. Add an Android app with package name `com.ahmadali.qselectapp` (or change the `applicationId` in `android/app/build.gradle.kts` to your own).
+3. Enable **Cloud Firestore** with appropriate security rules.
+4. Add an Android app with package name `com.ahmadali.qselectapp` or change the `applicationId` in `android/app/build.gradle.kts` to your own.
 5. Download your project's `google-services.json` and place it in `android/app/`.
-6. For Google Sign-In, add your debug and release SHA-1 signing fingerprints to your Android app settings in the Firebase Console, and configure the web client ID in `lib/providers/auth_provider.dart`.
+6. For Google Sign-In, add your debug and release SHA-1 signing fingerprints to your Android app settings in Firebase Console, and configure the web client ID in `lib/providers/auth_provider.dart`.
 7. Alternatively, run `flutterfire configure` to generate updated cross-platform Firebase options.
 
 > [!NOTE]
-> Client configuration files like `google-services.json` contain public client identifiers (such as project IDs and client API keys), not private server secrets. However, configuring your own project ensures access to your own Firebase Auth and Firestore instances.
+> Client configuration files like `google-services.json` contain public client identifiers such as project IDs and client API keys, not private server secrets. Configuring your own project ensures access to your own Firebase Auth and Firestore instances.
 
 ---
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -119,12 +177,14 @@ The project uses **native Android Firebase initialization** via `android/app/goo
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/your-username/q_select.git
    cd q_select
    ```
 
 2. Install dependencies:
+
    ```bash
    flutter pub get
    ```
@@ -132,13 +192,14 @@ The project uses **native Android Firebase initialization** via `android/app/goo
 3. Set up your TMDB credentials and Firebase project as described above.
 
 4. Run the application:
+
    ```powershell
    flutter run --dart-define=TMDB_API_KEY=YOUR_KEY --dart-define=TMDB_READ_ACCESS_TOKEN=YOUR_TOKEN
    ```
 
 ---
 
-## Known Limitations
+## ⚠️ Known Limitations
 
 - **Android Focus**: Configured and validated primarily for Android; other platforms require platform-specific setup and testing.
 - **Rule-Based Recommendations**: Mood and type recommendations use fixed genre mapping rather than personalized ML algorithms.
@@ -147,7 +208,7 @@ The project uses **native Android Firebase initialization** via `android/app/goo
 
 ---
 
-## Security Notes
+## 🔐 Security Notes
 
 - **Credential Separation**: All live TMDB keys and bearer tokens have been removed from source code and replaced with compile-time environment variables.
 - **Auth Token Privacy**: Authentication tokens (`accessToken`, `idToken`, OAuth credentials) are handled strictly in memory by authentication providers and are never logged or printed.
@@ -156,6 +217,6 @@ The project uses **native Android Firebase initialization** via `android/app/goo
 
 ---
 
-## Author
+## 👨‍💻 Author
 
 **Ahmad Ali**
