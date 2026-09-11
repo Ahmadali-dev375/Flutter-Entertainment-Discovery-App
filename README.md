@@ -16,17 +16,19 @@
 
 ## ✨ Features
 
+- **Guest Mode with Account Migration**: Use the app without creating an account, save watchlist data locally, and later transfer that data to a Google account for backup and continued access when switching devices.
+- **Google Account Sync**: Sign in with Google to associate watchlist data with your account and restore it on another device.
 - **Trending Discovery**: Browse trending movies and TV series fetched in real time.
 - **Mood-Based Recommendations**: Explore curated content recommendations mapped to moods such as happy, chill, romantic, and excited.
-- **Category & Genre Browsing**: Filter content across multiple movie and TV genres.
-- **Movie & TV Filtering**: Search and filter titles by type, rating, and genre.
-- **Local Watchlist**: Fast, offline-first watchlist powered by local SQLite (`sqflite`).
+- **Category & Genre Browsing**: Explore movies and TV shows across multiple genres.
+- **Movie & TV Filtering**: Search and filter titles by content type, rating, and genre.
+- **Local Watchlist**: Save titles locally using SQLite (`sqflite`) for fast, offline-first access.
 - **Firebase Authentication**: Email/password registration and sign-in.
-- **Google Sign-In**: One-tap OAuth authentication using Google credentials.
-- **Cloud Firestore Synchronization**: Cloud backup and cross-device sync of user watchlists with account-level isolation.
-- **User Profile**: Profile management screen displaying account information and preferences.
-- **Dark Mode**: System-aware and manual dark theme support.
-- **Rich Media Details**: Detailed views with overview, cast, directors, release dates, and trailer links via `url_launcher`.
+- **Google Sign-In**: One-tap authentication using Google credentials.
+- **Cloud Firestore Synchronization**: Back up and synchronize authenticated users' watchlists across devices with account-level isolation.
+- **User Profile**: Manage account information, preferences, and saved content.
+- **Dark Mode**: System-aware and manually selectable dark theme support.
+- **Rich Media Details**: View overviews, cast, directors, release dates, and trailer links via `url_launcher`.
 
 ---
 
