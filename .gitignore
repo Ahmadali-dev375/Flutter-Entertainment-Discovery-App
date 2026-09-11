@@ -1,0 +1,52 @@
+# See https://www.dartlang.org/guides/libraries/private-files
+
+# Files and directories created by pub
+.dart_tool/
+.packages
+build/
+.pub/
+.pub-cache/
+
+# Directory created by dartdoc
+doc/api/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Avoid committing generated Javascript files:
+*.dart.js
+*.info.json
+*.js
+*.js_
+*.js.deps
+*.js.map
+
+# Flutter plugins
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# IDE and editor files
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.project
+
+# Android local / build files
+android/.gradle/
+android/local.properties
+
+# Keystores and signing files
+new-release-key.jks
+*.jks
+*.keystore
+android/key.properties
+key.properties
+# Firebase project-specific configuration
+android/app/google-services.json
+ios/Runner/GoogleService-Info.plist
+lib/firebase_options.dart
+firebase.json
