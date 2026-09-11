@@ -33,37 +33,58 @@
 ## 📱 App Showcase
 
 <p align="center">
-  <img src="assets/screenshots/q-select-showcase.gif" alt="Q Select animated app showcase" width="850">
+  <img
+    src="assets/q-select-showcase.gif"
+    alt="Q Select App Showcase"
+    width="850"
+  />
 </p>
 
 <p align="center">
-  <sub>Animated GitHub-friendly carousel showcasing discovery, filters, content preferences, and profile/watchlist flows.</sub>
+  <sub>
+    🎬 Animated showcase of Q Select — discovery, recommendations,
+    filtering, preferences, profile, and watchlist experience.
+  </sub>
 </p>
 
+<br>
+
 <details>
-<summary><b>🖼️ View all screenshots</b></summary>
+<summary><b>🖼️ View All Screenshots</b></summary>
+
 <br>
 
 <table>
   <tr>
-    <td align="center" width="25%">
-      <img src="assets/screenshots/home.jpeg" alt="Q Select home and recommendations screen" width="210"><br>
-      <b>Home & Recommendations</b><br>
+    <td align="center" width="50%">
+      <img src="assets/home.jpeg" width="240" alt="Q Select Home and Recommendations Screen"/>
+      <br><br>
+      <b>🏠 Home & Recommendations</b>
+      <br>
       <sub>Mood discovery, trending content, and recommendations</sub>
     </td>
-    <td align="center" width="25%">
-      <img src="assets/screenshots/filters.jpeg" alt="Q Select filter options screen" width="210"><br>
-      <b>Filter Options</b><br>
-      <sub>Genre and discovery filtering controls</sub>
+    <td align="center" width="50%">
+      <img src="assets/filters.jpeg" width="240" alt="Q Select Filter Options Screen"/>
+      <br><br>
+      <b>🔎 Filter Options</b>
+      <br>
+      <sub>Genre, rating, and discovery filtering</sub>
     </td>
-    <td align="center" width="25%">
-      <img src="assets/screenshots/content-type.jpeg" alt="Q Select content type selection" width="210"><br>
-      <b>Content Preferences</b><br>
-      <sub>Rule-based content-type selection</sub>
+  </tr>
+
+  <tr>
+    <td align="center" width="50%">
+      <img src="assets/content-type.jpeg" width="240" alt="Q Select Content Type Selection"/>
+      <br><br>
+      <b>🎭 Content Preferences</b>
+      <br>
+      <sub>Movie and TV content-type selection</sub>
     </td>
-    <td align="center" width="25%">
-      <img src="assets/screenshots/profile.jpeg" alt="Q Select user profile and watchlist screen" width="210"><br>
-      <b>Profile & Watchlist</b><br>
+    <td align="center" width="50%">
+      <img src="assets/profile.jpeg" width="240" alt="Q Select User Profile and Watchlist Screen"/>
+      <br><br>
+      <b>👤 Profile & Watchlist</b>
+      <br>
       <sub>Account settings, dark mode, and saved titles</sub>
     </td>
   </tr>
@@ -71,9 +92,12 @@
 
 </details>
 
-> [!NOTE]
-> The profile screenshot in this repository has the account email visually redacted for public portfolio use.
+<br>
 
+> [!NOTE]
+> The profile screenshot has the account email visually redacted for public portfolio use.
+
+---
 ---
 
 ## 🧰 Tech Stack
