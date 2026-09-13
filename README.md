@@ -129,21 +129,13 @@ TMDB API credentials are **not committed** to this repository. You must obtain y
 The application reads TMDB credentials at compile time using Dart environment variables (`--dart-define`).
 
 ### Required Variables
-
+```markdown
 | Variable | Description |
 |---|---|
 | `TMDB_API_KEY` | Your TMDB v3 API Key |
 | `TMDB_READ_ACCESS_TOKEN` | Optional TMDB v4 Read Access Token (Bearer Token) |
 
 ```
-
-> [!NOTE]
-> If credentials are not supplied, the app will launch gracefully and display a missing-credentials notice in debug logs without crashing, but TMDB content requests will return empty results.
-
-> [!WARNING]
-> Using `--dart-define` keeps credentials out of the public source repository. However, client-side credentials compiled into a mobile binary can still be extracted by reverse engineering.
-
----
 
 ## 🚀 Getting Started
 
